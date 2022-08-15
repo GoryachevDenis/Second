@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
       /*theme: ThemeData(
         primarySwatch: Colors.white,
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: const Text('Settings'),
             ),
           ],
-          title: Text('Fiinance',
+          title: const Text('Fiinance',
               style: TextStyle(color: Colors.black, fontSize: 18)),
         ),
         body: Column(
@@ -68,13 +68,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-             // width: 700,
+              // width: 700,
               //height: 275,
-              padding: EdgeInsets.all(50.0),
-              margin: EdgeInsets.all(10.0),
+              //padding: const EdgeInsets.all(50.0),
+              margin: const EdgeInsets.all(10.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.min,
+                //mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
+                  const SizedBox(height: 30),
                   const Text(
                     '\$904.91',
                     textAlign: TextAlign.center,
@@ -86,16 +88,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   ElevatedButton(
                     style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      //side: BorderSide(color: Colors.red)
-                    ))),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                          //side: BorderSide(color: Colors.red)
+                        ),
+                      ),
+                    ),
                     onPressed: () {},
                     child: const Text('Change currency'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Container(
@@ -104,14 +107,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(20),
                           bottomRight: Radius.circular(20)),
-                      gradient: LinearGradient(
-                        colors: [
-                          Color(0xff00CFFF),
-                          Color(0xff3000E0),
-                        ],
-                      ),
+                      color: Colors.black12,
                     ),
-                    padding: EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(15.0),
                     //width: double.infinity,
                     //color: Colors.green,
                     child: const Text(
@@ -128,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
               height: 15,
             ),
@@ -139,21 +137,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   Column(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.dashboard),
+                        icon: const Icon(Icons.dashboard),
                         onPressed: () {},
                         iconSize: 40,
                       ),
-                      Text('Statistics')
+                      const Text('Statistics')
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.add_circle),
+                        icon: const Icon(Icons.add_circle),
                         onPressed: () {},
                         iconSize: 40,
                       ),
-                      Text('Statistics')
+                      const Text('Statistics')
                     ],
                   ),
                 ],
@@ -164,38 +162,38 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.all(Radius.circular(12)),
                 color: Colors.black12,
               ),
-              margin: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 12.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
                         child: Column(
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                Text('Apply TV+'),
-                                Icon(
+                                const Text('Apply TV+'),
+                                const Icon(
                                   Icons.more_horiz,
                                   color: Colors.black26,
                                 )
                               ],
                             ),
-                            Text(
+                            const Text(
                               'Entartainment',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.grey,
                               ),
                             ),
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text('4,89',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 25,
                             )),
                       )
@@ -207,28 +205,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.all(Radius.circular(12)),
                 color: Colors.black12,
               ),
-              margin: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 12.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
                         child: Column(
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                Text('Health Insurance'),
-                                Icon(
+                                const Text('Health Insurance'),
+                                const Icon(
                                   Icons.more_horiz,
                                   color: Colors.black26,
                                 )
                               ],
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment.centerLeft,
-                              child: Text(
+                              child: const Text(
                                 'Health',
                                 style: TextStyle(
                                   color: Colors.grey,
@@ -238,10 +236,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text('89,49',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 25,
                             )),
                       )
